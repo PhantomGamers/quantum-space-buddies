@@ -361,7 +361,7 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Assembly-CSharp_publicized">
-      <HintPath>$(GameDir)\OuterWilds_Data\Managed\publicized_assemblies\Assembly-CSharp_publicized.dll</HintPath>
+      <HintPath>lib\Assembly-CSharp_publicized.dll</HintPath>
     </Reference>
     <Reference Include="Assembly-CSharp-firstpass">
       <HintPath>$(GameDir)\OuterWilds_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
@@ -430,7 +430,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="lib\Assembly-CSharp_publicized.dll" />
     <Content Include="lib\UnityEngine.Networking.dll" />
   </ItemGroup>
   <ItemGroup>
@@ -455,7 +454,7 @@ copy /y "$(ProjectDir)\manifest.json" "$(OwmlDir)\Mods\$(ProjectName)"
 
 copy /y "$(SolutionDir)\WeavedFiles\QSB.dll" "$(OwmlDir)\Mods\$(ProjectName)"
 
-xcopy /y "$(ProjectDir)\lib"  "$(OwmlDir)\Mods\$(ProjectName)"</PostBuildEvent>
+xcopy /y "$(ProjectDir)\lib\UnityEngine.Networking.dll"  "$(OwmlDir)\Mods\$(ProjectName)\"</PostBuildEvent>
   </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>
